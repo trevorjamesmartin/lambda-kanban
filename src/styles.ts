@@ -29,7 +29,7 @@ export const ColumnTitle = styled.div`
 export const CardContainer = styled.div`
   background-color: #fff;
   curser: pointer;
-  margin-bottom: 0.5;
+  margin-bottom: 4px;
   padding: 0.5rem 1rem;
   max-width: 300px;
   border-radius: 3px;
