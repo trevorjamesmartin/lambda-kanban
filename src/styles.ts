@@ -78,7 +78,7 @@ export const NewItemInput = styled.input`
   border-radius: 3px;
   border: none;
   box-shadow: #091e4240 0px 1px 0px 0px;
-  margin-botton: 0.5rem;
+  margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   width: 100%;
 `;
