@@ -1,5 +1,25 @@
 import styled from "styled-components";
 
+interface DragPreviewContainerProps {
+  isHidden?: boolean;
+  isPreview?: boolean;
+}
+
+export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
+  transform: ${(props) => (props.isPreview ? "rotate(5deg)" : undefined)};
+  opacity: ${(props) => (props.isHidden ? 0 : 1)};
+`;
+
+export const CustomDragLaterContainer = styled.div`
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+`;
+
 export const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -7,16 +27,21 @@ export const AppContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 1.5rem;
-  background-color: #4f84c4;
+  // background-color: #4f84c4;
+  background-color: #121212;
+  background-image: url("https://images.pexels.com/photos/355887/pexels-photo-355887.jpeg");
+  background-size: cover;
 `;
 
-export const ColumnContainer = styled.div`
+export const ColumnContainer = styled(DragPreviewContainer)`
+  display: flex;
+  flex-direction: column;
   background-color: #f1f1f1;
   width: 300px;
   min-height: 40px;
   margin-right: 20px;
   border-radius: 3px;
-  padding: 1rem;
+  padding: 8px 8px;
   flex-grow: 0;
 `;
 
